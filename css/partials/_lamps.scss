@@ -1,0 +1,450 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+
+// 1. ROOT 					==============================
+// 2. TYPOGRAPHY 			==============================
+// 3. COLOUR 				==============================
+// 4. TEXTURE 				==============================
+// 5. ELEMENTS 				==============================
+// 6. LAYOUT 				==============================
+
+body {
+  background: url(tweed.png);
+}
+
+.media-body {
+  width: 100%;
+
+  p {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding:0.5em;
+  }
+}
+.media-one {
+  text-align: left;
+  padding-top: 2%;
+}
+.media-two {
+  text-align: right;
+  padding-top: 2%;
+}
+.media-three {
+  text-align: left;
+  padding-top: 2%;
+}
+
+.hero-unit {
+  img {
+    position: relative;
+    top: -0.7em;
+    left: -0.3em;
+    max-width:48px;
+    max-height:48px;
+  }
+}
+
+.l-panel {
+
+  &:first-child { 
+    border-top-width : 0;
+    border-bottom-width : 0; }
+
+  &:nth-child(2) { 
+    border-top-width : 0; }
+
+  &:last-of-type { 
+    margin-bottom : $baselineheight; 
+    border-bottom-width : 0; }
+}
+
+.l-trigger {
+  padding : $baselineheight $gutterwidth / 2;
+  background-color : $tertiarycolor;
+  color : $white;
+  border-bottom: 0.5em solid #fff;
+
+  &:first-of-type {
+    border-top-width : 0; } 
+
+  p {
+    margin-bottom : $baselineheight / 4;
+    text-transform: uppercase; }
+
+  p:last-child {
+    margin-bottom : 0;
+    @include font-size(14);
+    text-align : right; }
+
+  h1 {
+    @include font-size(24);
+    font-weight : normal;
+    text-transform : uppercase;
+    margin-left: 50px;}
+
+  a, a:visited {
+    display : block;
+    color : $white; 
+
+    &:hover {
+      color : rgba($white,.9); 
+      text-decoration : none; }
+    }
+  }
+
+  .l-wrap {
+    margin : 0 auto; 
+  }
+
+  .l-hidden {
+// margin-bottom : $baselineheight * 2;
+// padding : $baselineheight * 2 $gutterwidth / 2 $baselineheight / 2 $gutterwidth / 2; 
+
+  &.in {
+    margin-bottom : $baselineheight * 2;
+    padding : $baselineheight * 2 $gutterwidth / 2 $baselineheight / 2 $gutterwidth / 2; }
+
+  .l-wrap {
+    margin-bottom : $baselineheight * 2;
+
+  h2 {
+    text-transform : uppercase;
+    @include font-size(32);
+    font-weight : normal;
+    color : rgba($textcolor, .5); }
+}
+
+.l-content-t {
+  border-bottom : $borderwidth $borderstyle $bordercolor; }
+
+  &:last-of-type {
+    border-bottom-width : 0; }
+}
+
+.l-introduction {
+  margin : 0;
+  padding : 0;
+  background: 
+   url(phone.png) 50% 55% no-repeat,   /*            like z-index: 3; */
+   url(bg1440x600.jpg) 50% 100%;                      /* On bottom, like z-index: 1; */
+
+ .hero-unit {
+  margin : 0;
+  padding : $gutterwidth $baselineheight / 2 $gutterwidth * 2;
+  background-color : transparent;
+  border-width : 0; 
+  min-height: 23em;
+
+  h1 {
+    color: $white 
+  }
+
+  p {
+    font-family:'Advent Pro', 
+    sans-serif; 
+    color: $white; 
+    text-shadow: 0.0em 0.1em 0.1em $black; 
+    letter-spacing: 0.1em; 
+    text-align: center;
+    margin: 0 0 1em;}
+
+  .secondary {
+    text-align : center; 
+    .btn {
+      position: relative;
+      top: 170px;
+    }
+    .modal {
+      .btn {
+        position: relative;
+        top: 0px !important;
+      }
+      }
+    }
+  }
+}
+
+#panel-clients {
+  .l-trigger {
+    background-color: transparent;
+    padding: 0;
+    border-bottom: 0px; 
+    h1 {
+      background: transparent url(blue-line.png) 0% 95% no-repeat;
+      margin-left: 0;
+    }
+    a {
+      color: #333;
+      border-bottom: 1px solid $lighterneutralcolor;
+    }
+    .l-content {
+      width:85%;
+      margin:0 auto;
+    }
+  }
+}
+
+#panel-images-hidden img {
+  max-width : 120px;
+  margin-right : $gutterwidth / 2; }
+
+#panel-typography-hidden:active {
+  display : block !important; }
+
+.well-small {
+  float:left;
+  margin: 0.3em;
+  width: 37%;
+  padding : $gutterwidth / 2;
+  background-color : $wellbackgroundcolor;
+  border : 1px $wellborderstyle $lightneutralcolor;;
+  img {
+    margin: 0 auto;
+  }
+}
+
+// 7. VENDOR-SPECIFIC 		==============================
+// 8. MODERNIZR 			==============================
+// 9. TEMPLATE SPECIFICS 	==============================
+
+// MEDIA QUERIES 		==============================
+
+@media only #{$media} and ($feature: $bp4) {
+
+
+  .l-introduction {
+    padding : $baselineheight * 2 0 $baselineheight * 4 0; 
+
+    .hero-unit {
+      margin : 0 auto;
+      padding : 0;
+      max-width : 940px;
+      @include box-sizing(border-box); }
+    }
+
+    .hidden hr {
+      margin : 0 auto;
+      width : 90%;
+      max-width : 768px; }
+
+    .l-wrap {
+      @include clearfix; 
+      width : 90%;
+      max-width : 940px; }
+    .l-summary-t {
+      float : left;
+      margin-right : -100%;
+      width : 38.4375%;
+      padding-right : $gutterwidth;
+      @include box-sizing(border-box); }
+
+    .l-trigger .l-summary-t {
+      min-height : 35px;
+      background-image : url(l-trigger-icons.png); 
+      background-repeat : no-repeat; }
+
+    #panel-price-tables .l-trigger .l-summary-t {
+      background-position : 95% -100px; }
+
+    #panel-pixelscut {
+      .l-trigger {
+        -moz-box-shadow: 0px 4px 4px 2px $lighterneutralcolor;
+        -webkit-box-shadow: 0px 4px 4px 2px $lighterneutralcolor;
+        box-shadow: 0px 4px 4px 2px $lighterneutralcolor;
+        .l-summary-t {
+      background-position : 0 -716px;}
+      }
+    }
+
+    .l-content-t {
+      clear : right;
+      float : left;
+      margin-left : 41.0417%;
+      width : 58.9583%; 
+      p {
+        text-transform: uppercase;
+      }
+    }
+
+    .l-summary-b {
+      float : left;
+      width : 70%;
+      padding-right : $gutterwidth;
+      @include box-sizing(border-box); }
+
+    .l-content-b {
+      clear : right;
+      float : left;
+      margin-left : 32%;
+      width : 70%; }
+
+    [role="contentinfo"] small {
+      display : block; }
+
+
+    [role="contentinfo"] small {
+      display : block; }
+    }
+// Pricing Table Style
+
+.package {
+  min-height: 29em;
+  border-radius: $borderradius * 2;
+  border : $borderwidth $borderstyle $bordercolor;
+  text-align: center;
+  width:100%;
+  margin-right: 2%;
+  margin-bottom:2%;
+  float:left;
+  h2{
+    border-top-left-radius: $borderradius * 2;
+    border-top-right-radius: $borderradius * 2;
+    color: $white;
+    @include font-size(18);
+    padding: 1em;
+  }
+  p {
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    line-height: 1.2em;
+  }
+  h5 {
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    line-height: 1.2em;
+    @include font-size(14);
+  }
+  h3 {
+    color: $neutralcolor;
+    font-weight: lighter;
+    @include font-size(24);
+    padding: 0;
+    margin-bottom: 0.5em;
+    line-height: 1.2em;
+  }
+}
+
+.special {
+  position:relative;
+  width: 100%;
+  left: 0;
+  h2{
+    background-color: $tertiarycolor;
+  }
+  .s-col-l {
+    width: 100%;
+    border-bottom: $borderwidth $borderstyle $lightbordercolor;
+  }
+  .s-col-r {
+    margin-top: 1em;
+    width: 100%;
+  }
+}
+
+.special-btn {
+  position: absolute;  
+  right: 2em;
+  margin: -7.2em 0 0;
+}
+
+.special-img {
+  position: absolute;
+  z-index: 12;
+  left: 1.3em;
+  margin-top: -13.6em;
+}
+
+.micra {
+  h2 {
+    background-color: $tertiarycolor;
+  }
+  h3 {
+    position:relative;
+    bottom: 0;
+  }
+  h5 {
+    position:relative;
+    bottom: 0;
+  }
+}
+
+.trenta {
+  h2 {
+    background-color: $azulcolor;
+  }
+  h3 {
+    position:relative;
+    bottom: 0;
+  }
+  h5 {
+    position:relative;
+    bottom: 0;
+  }
+}
+
+.plenta {
+  h2 {
+    background-color: $verdecolor;
+  }
+}
+
+footer {
+  clear: both;
+  border-top: 0.5em solid #fff;
+  -moz-box-shadow:    0px 3px 3px 2px $lighterneutralcolor;
+  -webkit-box-shadow: 0px 3px 3px 2px $lighterneutralcolor;
+  box-shadow:         0px 3px 3px 2px $lighterneutralcolor;
+  background: $tertiarycolor;
+  height:572px;
+  color: $white;
+  padding-top:3em;
+  .col-group{
+    overflow: hidden;
+    max-width:98%;
+    margin:0 auto;
+    .b-wrap {
+      width: 100%;
+      float:left;
+      padding-bottom: 2em;
+      h2 {
+        text-shadow: -1px -1px $lighterneutralcolor;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      #social {
+        list-style: none;
+        li {
+          a {
+            float: left;
+            margin: 5px 5px;
+            background-image: url(social-ico.png);
+            width: 62px;
+            height: 62px;}
+            a.linkedin{background-position:0 0}
+            a.linkedin:hover{background-position:0 682px}
+            a.pinterest{background-position:0 620px}
+            a.pinterest:hover{background-position:0 558px}
+            a.behance{background-position:0 496px}
+            a.behance:hover{background-position:0 434px}
+            a.vimeo{background-position:0 372px}
+            a.vimeo:hover{background-position:0 310px}
+            a.twitter{background-position:0 248px}
+            a.twitter:hover{background-position:0 186px}
+            a.facebook{background-position:0 124px}
+            a.facebook:hover{background-position:0 62px}
+          }
+        }
+        ul {
+          margin: 0;
+          li {
+            letter-spacing: 0.2em;
+            list-style: none;
+          }
+        }
+      }
+    }
+  }
+
+// Twitter Feed 

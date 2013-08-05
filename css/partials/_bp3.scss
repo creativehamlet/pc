@@ -1,0 +1,62 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+
+body:after {
+content : 'bp3';
+display : none; }
+
+.media-body {;
+  width:60%
+}
+
+.l-introduction {
+  background: 
+   url(tablet.png) 50% 100% no-repeat,   /*            like z-index: 3; */
+   url(bg1440x600.jpg) 50% 100%;
+  .secondary {
+    .btn {
+      position: relative;
+      top: 0px !important;
+    }
+  }
+}
+
+.well-small {
+  width: 25%;
+}
+
+.micra {
+  h3 {
+    position:relative;
+    bottom: -5.2em;
+  }
+  h5 {
+    position:relative;
+    bottom: -9em;
+  }
+}
+
+.trenta {
+  h3 {
+    position:relative;
+    bottom: -1.1em;
+  }
+  h5 {
+    position:relative;
+    bottom: -1.8em;
+  }
+}
+
+footer {
+  position:relative;
+  background: $tertiarycolor;
+  min-height:13em;
+  .col-group{
+    margin:0 auto;
+    .b-wrap {
+      clear: none;
+    }
+  }
+}
